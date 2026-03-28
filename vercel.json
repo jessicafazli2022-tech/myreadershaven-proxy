@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/:path*",
+      "destination": "https://book-preview-80c02836.viktor.space/:path*"
+    }
+  ]
+}
