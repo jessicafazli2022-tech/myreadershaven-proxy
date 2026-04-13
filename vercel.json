@@ -1,7 +1,10 @@
 {
+  "buildCommand": null,
+  "outputDirectory": ".",
+  "framework": null,
   "rewrites": [
     {
-      "source": "/((?!assets/).*)",
+      "source": "/((?!assets|badge|favicon|icon|ads\\.txt|manifest\\.json|sw\\.js|book\\.html|hoopla_libraries\\.json|libraries\\.json|team|themes).*)",
       "destination": "/index.html"
     }
   ]
