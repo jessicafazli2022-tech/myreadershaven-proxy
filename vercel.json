@@ -1,8 +1,11 @@
 {
+  "buildCommand": null,
+  "outputDirectory": ".",
+  "framework": null,
   "rewrites": [
     {
-      "source": "/:path*",
-      "destination": "https://book-preview-80c02836.viktor.space/:path*"
+      "source": "/((?!assets|badge|favicon|icon|ads\\.txt|manifest\\.json|sw\\.js|book\\.html|hoopla_libraries\\.json|libraries\\.json|team|themes).*)",
+      "destination": "/index.html"
     }
   ]
 }
