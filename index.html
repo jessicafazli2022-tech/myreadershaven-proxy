@@ -1,5 +1,54 @@
-<!DOCTYPE html>
-<html>
-<head><meta http-equiv="refresh" content="0;url=/"></head>
-<body>Redirecting...</body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" href="/icon-192.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <meta name="theme-color" content="#0a0a0f" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="My Reader's Haven" />
+    <meta name="description" content="Track your reading journey with My Reader's Haven — your personal book library, series tracker, daily deals and more." />
+    <title>My Reader's Haven</title>
+    <!-- Suppress persistent cookie consent banners before React loads.
+         The opt-out modal is allowed through; CCPA compliance is via Privacy Policy page. -->
+    <style>
+      /* Pre-React: hide Consently banner bar but allow the opt-out modal to work */
+      #cc-main:not(.cc--visible), .cc-revoke,
+      .fc-ab-root, [id^="google_fc_"], #googlefc-wrapper,
+      .googlefc-dialog-content, #googlefc-consent-dialog {
+        display: none !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+        height: 0 !important;
+        overflow: hidden !important;
+      }
+    </style>
+    <script src="https://tag.grainql.com/v4/myreadershaven-79jk9m.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6393466820967504" crossorigin="anonymous"></script>
+    <!-- Google Funding Choices removed — caused duplicate "Do Not Sell" banner alongside Consently -->
+    <!-- Capture PWA install prompt as early as possible (before React loads) -->
+    <script>
+      window.__pwaInstallPrompt = null;
+      window.addEventListener('beforeinstallprompt', function(e) {
+        e.preventDefault();
+        window.__pwaInstallPrompt = e;
+        window.dispatchEvent(new Event('pwaInstallReady'));
+      });
+      window.addEventListener('appinstalled', function() {
+        window.__pwaInstalled = true;
+        window.__pwaInstallPrompt = null;
+        window.dispatchEvent(new Event('pwaInstalled'));
+      });
+    </script>
+    <!-- Consently Banner is loaded after login via app layout -->
+    <!-- Visitor Tracking removed — conflicted with grainql analytics (duplicate getLocalStorageNumber) -->
+    <script type="module" crossorigin src="/assets/index-CvOoqdwE.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-Djl76poN.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
 </html>

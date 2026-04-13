@@ -1,2 +1,0 @@
-# myreadershaven-proxy
-Viktor Myreadershaven
